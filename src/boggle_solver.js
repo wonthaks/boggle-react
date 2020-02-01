@@ -95,7 +95,7 @@ function verifyWord(adjacencyList, word, wordIndex, gridNodes){
 }
 
 // This function finds all dictionary words that exist in the grid.
-module.exports = function findAllSolutions(grid, dictionary) {
+export default function findAllSolutions(grid, dictionary) {
   var foundWords = [];
   // Check for invalid inputs.
   if (!grid || !dictionary) {
