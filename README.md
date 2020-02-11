@@ -1,3 +1,5 @@
+The web app can be accessed via the link https://boggle-webapp.firebaseapp.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
