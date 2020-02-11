@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import LoginButton from './LoginButton.js';
 import NestedGrid from './Grid.js';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -33,6 +34,7 @@ let grid = RandomGrid();
 
 
 function App() {
+  const [user, setUser] = useState(null);
   const [gameStart, toggleGame] = useState(true);
   const classes = useStyles();
   const [solutions, setSolutions] = useState([]);
@@ -91,6 +93,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <LoginButton setUser={(user) => setUser(user)} />
+        {user != null &&
+        <p>Welcome, {user.displayName} ({user.email})</p>
+        }
         <Paper className={classes.paper}> GanksThiving : A Boggle Experience </Paper>
         <p></p>
         {isShown ? <NestedGrid grid={grid}/> : null}
